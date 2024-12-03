@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Task</title>
+    <style>
+        .fullbox{
+    display: flex;
+    justify-content: center;
+}
+.inputform{
+    display: flex;
+    border: 3px solid lightblue;
+    width: 550px;
+    padding: 20px;
+    justify-content: space-around;
+    
+}
+.inputlabels{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Textboxins{
+    width: 200px;
+    height: 100px;
+    border: 3px solid;
+    padding: 5px;
+}
+.inputbox{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.replacetxt{
+    width: 150px;
+    height: 30px;
+    position: relative;
+    top: 5px;
+    border: 1.5px solid;
+}
+.butbox{
+    top: 15px;
+    position: relative;
+}
+
+.buttonr{
+    width: 125px;
+    height: 30px;
+    position: relative;
+    top: 15px;
+    background-color: aquamarine;
+    border: 2px;
+    border-radius: 10px;
+}
+
+.replpart{
+    position: relative;
+    left: 15px;
+}
+    </style>
+</head>
+<body>     
+        <div class="fullbox">
+            <form class="inputform">
+                <div class="Repalcebox">
+                    <textarea name="textareaid" id="textareaid" class="Textboxins">I have a dream that my four little children will .I have a dream that one day on the red hills of Georgia. I have a dream today</textarea>
+                </div>
+                <div class="replpart">
+                    <label for="replace1">Old Text</label><br>
+                    <input type="text" class="replacetxt" id="replace1">
+                    <button type="button" class="buttonr" onclick="rep()">Replace</button>
+                </div>
+                <div class="replapart">
+                    <label for="repalce2">New Text</label> 
+                    <input type="text" class="replacetxt" id="replace2"><br>
+                    <button type="button" class="buttonr" onclick="repall()">Replace All</button>
+                </div>
+            </form>
+        </div> 
+        <script>
+            
+            function rep(){
+                let textareac = document.getElementById("textareaid").value;
+            console.log(textareac);
+            let oldtxt = document.getElementById("replace1").value;
+            console.log(oldtxt);
+            let newtxt = document.getElementById("replace2").value;
+            console.log(newtxt);
+                let newtxt2 = `${textareac.replace(oldtxt,newtxt)}`;
+                document.getElementById("textareaid").innerHTML = newtxt2;
+            }
+            function repall(){
+                let textareac = document.getElementById("textareaid").value;
+            console.log(textareac);
+            let oldtxt = document.getElementById("replace1").value;
+            console.log(oldtxt);
+            let newtxt = document.getElementById("replace2").value;
+            console.log(newtxt);
+                let newtxt2 = `${textareac.replaceAll(oldtxt,newtxt)}`;
+                document.getElementById("textareaid").innerHTML = newtxt2;
+            }
+        </script>
+</body>
+</html>

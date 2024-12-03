@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            border: 5px solid black;
+            width: 200px;
+            height: 350px;
+            margin: auto;
+            margin-top: 92px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .red1{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin:2px;
+        }
+        .yellow1{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin:2px;
+        }
+        .green1{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin:2px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="red1" id="red">
+            <label for="red"></label>
+        </div>
+        <div class="yellow1" id="yellow">
+            <label for="yellow"></label>
+        </div>
+        <div class="green1" id="green">
+            <label for="green"></label>
+        </div>
+    </div>
+    <script>
+        function stop(){
+            document.getElementById("red").style.backgroundColor="red";
+            document.getElementById("yellow").style.backgroundColor="white";
+            document.getElementById("green").style.backgroundColor="white";
+            setTimeout(wait,3000);
+        }
+        function wait(){
+            document.getElementById("red").style.backgroundColor="white";
+            document.getElementById("yellow").style.backgroundColor="yellow";
+            document.getElementById("green").style.backgroundColor="white";
+            setTimeout(go,3000);
+        }
+        function go(){
+            document.getElementById("red").style.backgroundColor="white";
+            document.getElementById("yellow").style.backgroundColor="white";
+            document.getElementById("green").style.backgroundColor="green";
+            setTimeout(stop,3000);
+        }
+        stop();
+    </script>
+</body>
+</html>
