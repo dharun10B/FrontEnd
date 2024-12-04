@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Image</title>
+    <style>
+        .task1{
+            display: flex;
+            justify-content: center;
+        }
+        .switchbox{
+            text-align: center;
+        }
+        .switchbut{
+            height: 30px;
+            border-radius: 10px;
+            border: 2px solid red;
+            background-color: green;
+        }
+        img{
+            height: 200px;
+            width: 300px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="task1">
+        <div class="switchbox">
+         
+        <img src="../assests/images/zoro.jfif" alt="Zoro" id="img1"><br>
+        <h1 id="title1">Zoro</h1>
+        <button class="switchbut" type="button" style="width: 100px;" onclick="switchimgs()">Switch</button>
+               
+        </div>
+    </div>
+
+
+    <script>
+        function switchimgs(){
+            let val = document.getElementById("img1").alt;
+            console.log(val);
+            if(val == "Zoro"){
+                document.getElementById("img1").src="../assests/images/ussop.jfif";
+                document.getElementById("img1").alt="Ussopp";
+                document.getElementById("title1").innerHTML= "Ussopp";
+            }
+            else{
+                document.getElementById("img1").src="../assests/images/zoro.jfif";
+                document.getElementById("img1").alt="Zoro";
+                document.getElementById("title1").innerHTML= "Zoro";
+            }
+        }
+    
+        
+    
+    </script>
+</body>
+</html>

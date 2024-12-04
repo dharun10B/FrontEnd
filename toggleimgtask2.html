@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 200px;
+            width: 300px;
+        }
+        .task{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .taskbutton{
+            width: 160px;
+            height: 40px;
+            background-color: black;
+            color: green;
+            border: 2px solid black;
+            border-radius: 18px;
+            font-size: 18px;
+        }
+        .taskbutton2{
+            width: 160px;
+            height: 40px;
+            background-color: yellow;
+            color: black;
+            border: 2px solid yellow;
+            border-radius: 18px;
+            font-size: 18px;
+        }
+        .taskbutton3{
+            width: 180px;
+            height: 40px;
+            background-color: red;
+            color: yellow;
+            border: 2px solid red;
+            border-radius: 18px;
+            font-size: 18px;
+        }
+        .taskbutton4{
+            width: 160px;
+            height: 40px;
+            background-color: blue;
+            color: black;
+            border: 2px solid blue;
+            border-radius: 18px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="task">
+        <div class="switchbox">
+            <img src="../assests/images/iraq.jfif" alt="iraq" id="img2" width="400px">
+            <h3 id="imgtitle">Iraq</h3>
+
+        <button type="button" id="button1" onclick="switchimg2('Iraq')" class="taskbutton">Iraq</button>
+        <button type="button" id="button2" onclick="switchimg2('Turkey')" class="taskbutton2">Turkey</button>
+        <button type="button" id="button3" onclick="switchimg2('Crew')" class="taskbutton3">Crew</button>
+        <button type="button" id="button4" onclick="switchimg2('Luffy')"class="taskbutton4">Luffy</button>
+        </div>
+    </div>
+    <script>
+        function switchimg2(vals){
+            if(vals == "Turkey"){
+                document.getElementById("img2").src="../assests/images/Turkey.jfif";
+                document.getElementById("imgtitle").innerHTML = "Turkey";
+            }
+            else if(vals == "Iraq"){
+                document.getElementById("img2").src="../assests/images/iraq.jfif";
+                document.getElementById("imgtitle").innerHTML = "Iraq";
+            }
+            else if(vals == "Crew"){
+                document.getElementById("img2").src="../assests/images/crew.jfif";
+                document.getElementById("imgtitle").innerHTML = "Crew";
+            }
+            else {
+                document.getElementById("img2").src="../assests/images/Luffy.jfif";
+                document.getElementById("imgtitle").innerHTML = "Luffy";
+            }
+        }
+    </script>
+</body>
+</html>
